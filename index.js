@@ -52,8 +52,5 @@ async function handleRequest(request) {
     return Response.redirect(random.URL, 303)
   }
 
-  return new Response(null, {
-    status: 404,
-    statusText: "Endpoint not found",
-  })
+  return Response.redirect("https://sotb22-webring.neocities.org", 301)
 }
