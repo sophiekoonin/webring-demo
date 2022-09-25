@@ -34,7 +34,7 @@ async function handleRequest(request) {
   }
 
   if (referrer == null) {
-    // Redirect to webring homepage
+    return Response.redirect("https://sotb22-webring.neocities.org", 301)
   }
   const referrerIdx = data.findIndex((s) => s.URL === referrer)
 
