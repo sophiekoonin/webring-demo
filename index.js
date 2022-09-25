@@ -23,6 +23,7 @@ async function handleRequest(request) {
   const referrer = request.referrer
 
   if (pathname.startsWith("/random")) {
+    const random = data[Math.floor(Math.random() * data.length)]
     return Response.redirect(random.URL, 303)
   }
 
@@ -45,11 +46,6 @@ async function handleRequest(request) {
   if (pathname.startsWith("/prev")) {
     const prevInRing = referrerIdx > 0 ? referrerIdx - 1 : data.length - 1
     return Response.redirect(data[prevInRing].URL, 303)
-  }
-
-  if (pathname.startsWith("/random")) {
-    const random = data[Math.floor(Math.random() * data.length)]
-    return Response.redirect(random.URL, 303)
   }
 
   return Response.redirect("https://sotb22-webring.neocities.org", 301)
