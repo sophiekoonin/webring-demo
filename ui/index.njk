@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% set css %}
+    {% include "style.css" %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of the Browser 2022 Attendees Webring</title>
+  </head>
+  <body>
+    <h1>State of the Browser 2022 - Webring</h1>
+    <p>A webring for everyone who came to this lovely conference.</p>
+    <h2>Members</h2>
+    <ol>
+      {% for site in sites %}
+        <li>
+          <a href="{{ site.URL }}" target="_blank" rel="noopener noreferrer">{{ site.Title }}</a>
+          <p>{{ site.Description }}</p>
+          <p>Owner: {{ site["Owner name"] }}
+          </p>
+        </li>
+      {% endfor %}
+    </ol>
+  </body>
+</html>
