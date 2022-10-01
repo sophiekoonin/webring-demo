@@ -24,7 +24,7 @@ async function handleRequest(request) {
 
   if (pathname.startsWith("/random")) {
     const random = data[Math.floor(Math.random() * data.length)]
-    return Response.redirect(random.URL, 303)
+    return Response.redirect(random.URL, 302)
   }
 
   if (pathname.startsWith("/list")) {
@@ -40,12 +40,12 @@ async function handleRequest(request) {
   }
   if (pathname.startsWith("/next")) {
     const nextInRing = data.length > referrerIdx + 1 ? referrerIdx + 1 : 0
-    return Response.redirect(data[nextInRing].URL, 303)
+    return Response.redirect(data[nextInRing].URL, 302)
   }
 
   if (pathname.startsWith("/prev")) {
     const prevInRing = referrerIdx > 0 ? referrerIdx - 1 : data.length - 1
-    return Response.redirect(data[prevInRing].URL, 303)
+    return Response.redirect(data[prevInRing].URL, 302)
   }
 
   return Response.redirect("https://sotb22-webring.neocities.org", 301)
