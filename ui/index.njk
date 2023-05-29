@@ -23,8 +23,8 @@
       <ol class="flow">
         {% for site in sites %}
           <li>
-            <a href="{{ site.URL }}" target="_blank" rel="noopener noreferrer">{{ site.Title }}</a>
-            <p>{{ site.Description }}</p>
+            <a href="{{ site.URL }}" target="_blank" rel="noopener noreferrer">{{ site["Website title"] }}</a>
+            <p>{{ site["Website description"] }}</p>
             <p>Owner: {{ site["Owner name"] }}
             </p>
           </li>
