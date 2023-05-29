@@ -10,7 +10,7 @@ addEventListener("fetch", (event) => {
 
 async function fetchAndParseCsv() {
   const sheetRsp = await fetch(
-    `https://docs.google.com/spreadsheets/d/1Pz3aXwduy_of916hkFk8sKO-q5psEMsXLWkSMkjVqiw/gviz/tq?tqx=out:csv&sheet=Sites`
+    `https://docs.google.com/spreadsheets/d/1nXZmrNOCZKVgBpCydopiX4WbmgVpB4JRARX78fcfBuI/gviz/tq?tqx=out:csv&sheet=Sites`
   )
   const body = await sheetRsp.text()
   const parsed = Papa.parse(body, { header: true })
@@ -36,7 +36,7 @@ async function handleRequest(request) {
 
   const referrerIdx = data.findIndex((s) => s.URL === referrer)
   if (referrer == null || referrer === -1) {
-    return Response.redirect("https://sotb22-webring.neocities.org", 301)
+    return Response.redirect("https://weirdwebsitelovers.neocities.org", 301)
   }
   if (pathname.startsWith("/next")) {
     const nextInRing = data.length > referrerIdx + 1 ? referrerIdx + 1 : 0
@@ -48,5 +48,5 @@ async function handleRequest(request) {
     return Response.redirect(data[prevInRing].URL, 302)
   }
 
-  return Response.redirect("https://sotb22-webring.neocities.org", 301)
+  return Response.redirect("https://weirdwebsitelovers.neocities.org", 301)
 }
