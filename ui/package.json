@@ -10,6 +10,6 @@
   },
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "BASE_URL=http://localhost:8080 eleventy --serve"
   }
 }

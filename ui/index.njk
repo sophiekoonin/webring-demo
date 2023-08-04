@@ -8,17 +8,55 @@
       {{css | cssmin | safe}}</style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{{globals.baseUrl}}/favicon.png" type="image/png" />
+    <meta name="generator" content="Eleventy"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weird Website Lovers Webring</title>
   </head>
   <body>
-    <header>
-      <h1>Weird Website Lovers Webring</h1>
+    <header class="wordart-wrapper">
+      <h1 class="wordart">Weird Website Lovers Webring</h1>
     </header>
     <main>
+      <section>
       <p>A webring for everyone who loves weird websites. There's something special about those sites that have one joke, or very unusual CSS, or are just plain weird.
         <a href="https://forms.gle/oRBKcfZ6wjqEzZ819" target="_blank" rel="noopener noreferrer">Join now!</a>
       </p>
+      </section>
+
+      <section>
+           <h2>Code snippet</h2>
+      <p>Members, put this snippet on your website to display the webring! You can style it however you want. It'll look
+        something like this:</p>
+      <div class="webring-container">
+        <p>
+        <span aria-hidden="true">🪐</span>
+          <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Weird Website Lovers
+            Webring</a>
+                    <span aria-hidden="true">🪐</span>
+<span aria-hidden="true">//</span>
+          <a href="https://weird-website-lovers.cloudflare-aa8.workers.dev/prev">Prev</a>
+          <a href="https://weird-website-lovers.cloudflare-aa8.workers.dev/next">Next</a>
+          <a href="https://weird-website-lovers.cloudflare-aa8.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
+          <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">List</a>
+        </p>
+      </div>
+      <textarea readonly rows="6">
+        <div class="webring-container">
+          <span aria-hidden="true">🪐</span>
+          
+            <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Weird Website Lovers
+              Webring</a> <span aria-hidden="true">//</span>
+            <a href="https://weird-website-lovers.cloudflare-aa8.workers.dev/prev">Prev</a>
+            <a href="https://weird-website-lovers.cloudflare-aa8.workers.dev/next">Next</a>
+            <a href="https://weird-website-lovers.cloudflare-aa8.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
+            <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">List</a>
+          </p>
+        </div>
+      </textarea>
+      </section>
+      <section>
       <h2>Members</h2>
       <ol class="flow">
         {% for site in sites %}
@@ -30,42 +68,11 @@
           </li>
         {% endfor %}
       </ol>
-      <h2>Code snippet</h2>
-      <p>Members, put this snippet on your website to display the webring! You can style it however you want. It'll look
-        something like this:</p>
-      <div class="webring-container">
-        <span aria-hidden>🪐</span>
-        <p>Part of the
-          <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Weird Website Lovers
-            Webring</a>
-        </p>
-        <p>
-          <a href="https://webring.sophiekoonin.workers.dev/prev">Previous</a>
-          <a href="https://webring.sophiekoonin.workers.dev/next">Next</a>
-          <a href="https://webring.sophiekoonin.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
-          <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Members</a>
-        </p>
-      </div>
-      <textarea readonly rows="6">
-        <div class="webring-container">
-          <span aria-hidden>🪐</span>
-          <p>Part of the
-            <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Weird Website Lovers
-              Webring</a>
-          </p>
-          <p>
-            <a href="https://webring.sophiekoonin.workers.dev/prev">Previous</a>
-            <a href="https://webring.sophiekoonin.workers.dev/next">Next</a>
-            <a href="https://webring.sophiekoonin.workers.dev/random" target="_blank" rel="noopener noreferrer">Random</a>
-            <a href="https://weirdwebsitelovers.neocities.org" target="_blank" rel="noopener noreferrer">Members</a>
-          </p>
-        </div>
-      </textarea>
+      </section>
+   
     </main>
     <footer>
       <p>Created by
-        <a href="https://localghost.dev" target="_blank" rel="noopener noreferrer">Sophie</a>
-        for a talk demo</p>
-    </footer>
+        <a href="https://localghost.dev" target="_blank" rel="noopener noreferrer">Sophie</a> </p>   </footer>
   </body>
 </html>
