@@ -1,8 +1,4 @@
-name = "webring"
-type = "webpack"
-route = ''
-zone_id = ''
-usage_model = ''
+name = "weird-website-lovers-webring"
 compatibility_flags = []
 workers_dev = true
 compatibility_date = "2022-09-25"
