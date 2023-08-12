@@ -1,4 +1,5 @@
-name = "weird-website-lovers-webring"
+name = "weird-website-lovers"
 compatibility_flags = []
 workers_dev = true
 compatibility_date = "2022-09-25"
+main = "index.js"

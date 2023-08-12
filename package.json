@@ -5,9 +5,13 @@
   "author": "Sophie Koonin",
   "license": "MIT",
   "dependencies": {
-    "papaparse": "5.3.2"
+    "papaparse": "5.3.2",
+    "wrangler": "3.5.0"
   },
   "prettier": {
     "semi": false
+  },
+  "scripts": {
+    "deploy": "wrangler deploy"
   }
 }
