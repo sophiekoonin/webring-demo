@@ -54,8 +54,8 @@ h3 {
 
 li {
   display: block;
-  border: 1px solid #90a5cc;
-  background-color: #eaf3fa;
+  border: 1px solid #ff873c;
+  background-color: #faf6ea;
   border-radius: 4px;
   padding: 1rem;
 }
@@ -70,7 +70,7 @@ footer {
 }
 
 header {
-  margin-block-end: 3rem;
+  margin-block: 3rem;
 }
 main {
   max-width: min(60ch, 100%);
